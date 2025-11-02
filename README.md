@@ -11,23 +11,78 @@ A Django-based REST API system for managing customer loans, credit scoring, and 
 - **Data Ingestion**: Import customer and loan data from CSV files
 - **Background Tasks**: Celery-based async processing
 - **API Documentation**: Interactive Swagger UI and ReDoc
+- **Fully Dockerized**: Single command deployment with Docker Compose
 
 ## Technology Stack
 
 - **Framework**: Django 4.2.16 with Django Rest Framework 3.15.2
 - **Database**: PostgreSQL 15+
 - **Task Queue**: Celery 5.5+ with Redis
+- **Server**: Gunicorn (production-ready WSGI server)
 - **Python**: 3.11+ (tested on 3.13.5)
 - **API Documentation**: drf-spectacular (OpenAPI 3.0)
+- **Containerization**: Docker & Docker Compose
 
-## Requirements
+## Quick Start with Docker (Recommended) 🐳
+
+**Prerequisites**: Docker Desktop installed
+
+### Single Command Deployment
+
+```bash
+docker-compose up --build
+```
+
+That's it! The application will:
+- Build the Docker image
+- Start PostgreSQL database
+- Start Redis server
+- Run migrations automatically
+- Start Django web server on http://localhost:8000
+- Start Celery worker for background tasks
+- Start Celery beat for scheduled tasks
+
+### Ingest Sample Data
+
+```bash
+docker-compose exec web python manage.py ingest_data
+```
+
+### Access the Application
+
+- **API**: http://localhost:8000/api/
+- **Admin**: http://localhost:8000/admin/
+- **API Docs**: http://localhost:8000/api/docs/
+- **ReDoc**: http://localhost:8000/api/redoc/
+
+### View Logs
+
+```bash
+docker-compose logs -f web
+```
+
+### Stop Services
+
+```bash
+docker-compose down
+```
+
+**For detailed Docker documentation, see [DOCKER_GUIDE.md](DOCKER_GUIDE.md)**
+
+---
+
+## Manual Installation (Alternative)
+
+If you prefer to run without Docker:
+
+### Requirements
 
 - Python 3.11 or higher
 - PostgreSQL 15 or higher
 - Redis (for Celery)
 - pip and virtualenv
 
-## Installation
+### Installation
 
 ### 1. Clone the Repository
 
