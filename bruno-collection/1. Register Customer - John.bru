@@ -1,0 +1,21 @@
+meta {
+  name: 1. Register Customer - John
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/api/register/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "first_name": "John",
+    "last_name": "Doe",
+    "age": 30,
+    "phone_number": "9876543220",
+    "monthly_income": 50000
+  }
+}

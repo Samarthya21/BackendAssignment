@@ -1,0 +1,20 @@
+meta {
+  name: 7. Check High Loan Eligibility
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://127.0.0.1:8000/api/check-eligibility/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customer_id": 2,
+    "loan_amount": 500000,
+    "interest_rate": 10,
+    "tenure": 24
+  }
+}

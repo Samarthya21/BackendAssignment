@@ -69,8 +69,7 @@ class LoanEligibilityResponseSerializer(serializers.Serializer):
     tenure = serializers.IntegerField()
     monthly_installment = serializers.DecimalField(
         max_digits=12,
-        decimal_places=2,
-        source='monthly_installment'
+        decimal_places=2
     )
 
 

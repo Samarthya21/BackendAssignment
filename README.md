@@ -2,6 +2,10 @@
 
 A Django-based REST API system for managing customer loans, credit scoring, and loan eligibility checks.
 
+## 📹 Demo Video
+
+**Watch the API in action:** [Demo Video on Google Drive](https://drive.google.com/file/d/1mBEhXCN9nV2qOROKsAjk0-t-I9osSaxg/view?usp=drivesdk)
+
 ## Features
 
 - **Customer Management**: Register customers with auto-calculated credit limits

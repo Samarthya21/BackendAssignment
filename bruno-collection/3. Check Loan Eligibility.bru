@@ -1,0 +1,20 @@
+meta {
+  name: 3. Check Loan Eligibility
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:8000/api/check-eligibility/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "customer_id": 1,
+    "loan_amount": 100000,
+    "interest_rate": 12.5,
+    "tenure": 12
+  }
+}

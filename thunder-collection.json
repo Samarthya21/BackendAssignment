@@ -1,0 +1,111 @@
+{
+  "clientName": "Thunder Client",
+  "collectionName": "Credit Approval System",
+  "dateExported": "2025-11-02",
+  "version": "1.2",
+  "folders": [],
+  "requests": [
+    {
+      "name": "1. Register Customer - John",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/register/",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"Doe\",\n  \"age\": 30,\n  \"phone_number\": \"9876543210\",\n  \"monthly_income\": 50000\n}"
+      }
+    },
+    {
+      "name": "2. Register Customer - Jane",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/register/",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"first_name\": \"Jane\",\n  \"last_name\": \"Smith\",\n  \"age\": 28,\n  \"phone_number\": \"9876543211\",\n  \"monthly_income\": 75000\n}"
+      }
+    },
+    {
+      "name": "3. Check Loan Eligibility",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/check-eligibility/",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"customer_id\": 1,\n  \"loan_amount\": 100000,\n  \"interest_rate\": 12.5,\n  \"tenure\": 12\n}"
+      }
+    },
+    {
+      "name": "4. Create Loan",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/create-loan/",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"customer_id\": 1,\n  \"loan_amount\": 100000,\n  \"interest_rate\": 12.5,\n  \"tenure\": 12\n}"
+      }
+    },
+    {
+      "name": "5. View Loan Details",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/view-loan/1/",
+      "headers": []
+    },
+    {
+      "name": "6. View Customer Loans",
+      "method": "GET",
+      "url": "http://127.0.0.1:8000/api/view-loans/1/",
+      "headers": []
+    },
+    {
+      "name": "7. Check High Loan Eligibility",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/check-eligibility/",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"customer_id\": 2,\n  \"loan_amount\": 500000,\n  \"interest_rate\": 10,\n  \"tenure\": 24\n}"
+      }
+    },
+    {
+      "name": "8. Create Second Loan",
+      "method": "POST",
+      "url": "http://127.0.0.1:8000/api/create-loan/",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "type": "json",
+        "raw": "{\n  \"customer_id\": 2,\n  \"loan_amount\": 500000,\n  \"interest_rate\": 10,\n  \"tenure\": 24\n}"
+      }
+    }
+  ]
+}
